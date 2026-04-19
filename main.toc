@@ -1,0 +1,5 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Polinômio em uma variável}{3}{0}{1}
+\beamer@sectionintoc {2}{Usando o comando section}{4}{0}{2}
+\beamer@sectionintoc {3}{Outros exemplos}{11}{0}{3}
+\beamer@sectionintoc {4}{Ambiente teorema}{13}{0}{4}
