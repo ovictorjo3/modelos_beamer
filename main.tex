@@ -1,0 +1,209 @@
+%===========================================
+% Modelo de Exemplo Arquivo Beamer LaTeX
+% Objetivo: usar em minicurso de introdução ao LaTeX
+% Autoras: Luana Rios Mikolayczyk, Nara Bobko
+% Versão: out.2023
+%===========================================
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{multimedia,amsmath,graphicx,color,multicol,fancyhdr,amssymb,amsfonts,amsthm,setspace}
+
+% Para mudar o tema dos slides:
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+% \usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+% \usetheme{JuanLesPins}
+% \usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% Para mudar o pacote de cores dos slides:
+% \usecolortheme{albatross}
+% \usecolortheme{beaver}
+% \usecolortheme{beetle}
+%\usecolortheme{crane}
+% \usecolortheme{dolphin}
+% \usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+% \usecolortheme{monarca}
+% \usecolortheme{seagull}
+% \usecolortheme{seahorse}
+% \usecolortheme{spruce}
+\usecolortheme{whale}
+% \usecolortheme{wolverine}
+
+% Informações que serão inseridas no slide da capa:
+\title[Título curto]{Título completo da apresentação}
+\author[Nome abreviado]{Seu nome completo}
+\institute[UTFPR]{Universidade Tecnológica Federal do Paraná - UTFPR \\ Campus Curitiba}
+\date{\today}
+%Comando para colocar um logotipo em todos os slides. Dependendo do tema utilizado, muda a localização do logo no slide.
+%\logo{\includegraphics[scale=0.08]{logo-utfpr.png}} 
+
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{corolario}{Corolário}[section]
+\newtheorem{lema}{Lema}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%%%% Cada frame indica um slide %%%%
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Sumário}
+    \tableofcontents %Este comando é utilizado para inserir, automaticamente, um sumário com os títulos inseridos utilizando o comando section. Há outras maneiras de inserir títulos nos slides, como você verá a seguir, de modo que esses não apareçam no sumário.
+\end{frame}
+
+
+\section{Polinômio em uma variável}
+\begin{frame}{\insertsection}
+    \begin{definition}
+    Seja $\mathbb{K}$ um corpo qualquer. 
+    \end{definition}
+\end{frame}
+
+\section{Usando o comando section}
+\begin{frame}{\insertsection}
+    \begin{itemize}
+        \item Podemos utilizar este comando para fazer o título do slide.
+        \item Usado principalmente quando queremos fazer vários slides com o mesmo título.
+        \item Dependendo do tema escolhido, poderá ser gerado um sumário automático (este vai aparecer em todos os slides), também com os títulos inseridos com o comando section (veja, por exemplo, com o tema Berkeley).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Título do slide} 
+% Também dá para usar os comandos abaixo para fazer o título e o subtítulo
+%\frametitle{O título pode ser inserido assim}
+%\framesubtitle{Agora o subtítulo}
+% Veja que quando o título é inserido de qualquer uma dessas maneiras, sem utilizar o section, ele não aparece no sumário.
+
+    Aqui vem o texto do slide.
+
+    \alert{Esse texto está em destaque/alerta.} 
+    
+    A cor do alerta pode mudar conforme o tema. 
+
+\end{frame}
+
+\begin{frame}{Inserindo blocos}  % Necessário escolher um tema para que realmente fique no formato de bloco (destacado). Caso contrário, aparece como texto normal.    
+    \begin{block}{Título do bloco}
+        Aqui vem um texto qualquer.
+    \end{block}
+
+    O estilo do bloco também muda de acordo com o tema.
+    Veja abaixo o que acontece ao mudar o título de cada bloco.
+    
+    \begin{block}
+        Aqui vem um texto qualquer.
+    \end{block}
+
+    \begin{block}{\ }
+         Aqui vem um texto qualquer.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Outros tipos de bloco}
+    \begin{exampleblock}{Exemplo}
+        $$x^2-\frac{9}{25}=0$$
+    \end{exampleblock}
+
+% Se não centralizar a equação, fica assim:
+
+    \begin{alertblock}{Alerta}
+        $x=\pm\dfrac{3}{5}$
+    \end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Usando o comando pause}
+
+    \textbf{Usado para separar o que vai aparecer no slide.} Veja o exemplo: \pause
+
+    \begin{center}
+        Essa parte aparece depois
+    \end{center} \pause
+
+    E essa por último.
+    
+\end{frame}
+
+\section{Outros exemplos}
+\begin{frame}{\insertsection}
+% Para criar colunas no slide
+    \begin{columns}[c]
+        \begin{column}{5cm}
+            Escreva aqui o texto que irá ficar na primeira coluna, que possui 5 centímetros de largura, conforme especificado acima. 
+        \end{column}
+
+        \begin{column}{5cm}
+           Aqui deve ser o texto da segunda coluna, que também possui 5 centímetros de largura. Este tamanho pode ser alterado conforme a sua necessidade. Observe que cada coluna fica centralizada verticalmente na página quando utilizado o [c] no início do comando "columns''. Altere para [t] e veja o que acontece.
+        \end{column}
+    \end{columns}
+% Para aumentar o número de colunas, é só inserir mais ambientes "column" dentro do ambiente "columns", especificando a largura de cada uma delas, respeitando os limites do slide.
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \begin{itemize}
+        \item Para inserir listas, figuras e tabelas, são utilizados os mesmos comandos dos documentos em formato de artigo em \LaTeX. 
+        \item Mais informações sobre a formatação do beamer no \href{http://www.telecom.uff.br/pet/petws/downloads/tutoriais/beamer/tut_beamer_2k100205.pdf}{link}.
+    \end{itemize}
+\end{frame}
+
+\section{Ambiente teorema}
+\begin{frame}{Exemplo do ambiente teorema}
+    \begin{teo}[Teorema de Pitágoras]
+    \label{theo:Pitagoras}
+    Em todo triângulo retângulo, o quadrado do comprimento da hipotenusa é igual à soma dos quadrados dos comprimentos dos catetos. Esse resultado pode ser resumido usando-se a seguinte equação:
+    \[c^2=a^2+b^2,\]
+    em que $c$ representa o comprimento da hipotenusa, e $a$ e $b$ representam os comprimentos dos catetos.
+    \end{teo}
+\end{frame}
+
+
+% Exemplo Corolário
+% \begin{frame}{Exemplo Corolário}
+%    Como consequência do Teorema de Pitágoras temos os seguintes corolários: 
+%     \begin{corolario}
+%     Em todo triângulo retângulo, o comprimento da hipotenusa é maior que o comprimento de qualquer um dos catetos e menor que a soma deles.
+%     \end{corolario}
+
+%     \begin{corolario}
+%     Não existe triângulo retângulo cujos lados medem 1 cm, 2 cm e 3 cm.
+%     \end{corolario}
+% \end{frame}
+
+% Exemplo lema 
+% \begin{frame}{Exemplo Lema}
+%     \begin{lema}
+%     Seja $C$ um ponto em uma semi-reta definida pelos pontos $A$ e $B$, $S_{AB}$, se o segmento $AC$ é tal que $\overline{AC} < \overline{AB}$, então o ponto $C$ está entre $A$ e $B$.
+%     \end{lema}
+% \end{frame}
+
+
+
+\end{document}
